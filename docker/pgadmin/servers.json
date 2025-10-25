@@ -1,0 +1,14 @@
+{
+    "Servers": {
+      "1": {
+        "Name": "Gaming Platform DB (Local)",
+        "Group": "Development",
+        "Host": "postgres",
+        "Port": 5432,
+        "MaintenanceDB": "gaming_platform",
+        "Username": "postgres",
+        "SSLMode": "prefer",
+        "Comment": "Local development database for gaming platform"
+      }
+    }
+  }
