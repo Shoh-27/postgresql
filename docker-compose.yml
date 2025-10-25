@@ -31,7 +31,20 @@ services:
       - "postgres"
       - "-c"
       - "config_file=/etc/postgresql/postgresql.conf"
-
+  pgbouncer:
+    image: edoburu/pgbouncer:latest
+    container_name: gaming_platform_pgbouncer
+    environment:
+      DATABASE_URL: postgres://postgres:changeme@postgres:5432/gaming_platform
+      POOL_MODE: transaction
+      MAX_CLIENT_CONN: 1000
+      DEFAULT_POOL_SIZE: 25
+    ports:
+      - "6432:5432"
+    depends_on:
+      - postgres
+    networks:
+      - gaming_platform_network
   pgadmin:
     image: dpage/pgadmin4:latest
     container_name: gaming_platform_pgadmin

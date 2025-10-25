@@ -1,0 +1,26 @@
+# Environment variables
+.env
+!.env.example
+
+# Database data
+postgres_data/
+pgadmin_data/
+
+# Backup files
+*.backup
+*.dump
+*.sql.gz
+
+# Logs
+*.log
+logs/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
